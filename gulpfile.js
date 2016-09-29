@@ -115,3 +115,11 @@ gulp.task('packjs',function () {
             }
         }))
 });
+
+gulp.task('watch',function () {
+    gulp.watch('./**/*',['copy','sass','packjs']);
+});
+
+gulp.task('default',['watch','webserver'],function () {
+    console.log('任务列队执行完成');
+});
