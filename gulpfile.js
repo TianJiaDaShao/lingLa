@@ -117,7 +117,10 @@ gulp.task('packjs',function () {
 });
 
 gulp.task('watch',function () {
-    gulp.watch('./**/*',['copy','sass','packjs']);
+    gulp.watch('./*.html',['copy']);
+    gulp.watch('./images/**/*',['copy']);
+    gulp.watch('./src/styles/**/*',['sass']);
+    gulp.watch('./src/scripts/**/*',['packjs'])
 });
 
 gulp.task('default',['watch','webserver'],function () {
