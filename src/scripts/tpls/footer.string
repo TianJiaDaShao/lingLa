@@ -1,0 +1,24 @@
+<footer id="footer">
+    <ul>
+        <li class="active" data-url="/build/index.html">
+            <i class="iconfont">&#xe62e;</i>
+            <b>首页</b>
+        </li>
+        <li data-url="/build/search.html">
+            <i class="iconfont">&#xe610;</i>
+            <b>试用</b>
+        </li>
+        <li>
+            <i class="iconfont">&#xe60c;</i>
+            <b>邀请好友</b>
+        </li>
+        <li>
+            <i class="iconfont">&#xe614;</i>
+            <b>任务</b>
+        </li>
+        <li>
+            <i class="iconfont">&#xe60c;</i>
+            <b>我的领啦</b>
+        </li>
+    </ul>
+</footer>

@@ -51,6 +51,12 @@ gulp.task('webserver',function () {
                             res.end(data);
                         });
                         return;
+                    case '/api/shouye.php':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/shouye.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
                 }
                 next();
             }
@@ -72,26 +78,15 @@ gulp.task('copy',function () {
         .pipe(gulp.dest('./prd/images/'));
 });//拷贝网页及图片
 
-var cssFiles=[
-    './src/styles/usage/page/index-app.scss',
-    './src/styles/usage/page/invite-app.scss',
-    './src/styles/usage/page/mine-app.scss',
-    './src/styles/usage/page/task-app.scss',
-    './src/styles/usage/page/try-app.scss'
-];
 gulp.task('sass',function () {
-    gulp.src(cssFiles)
+    gulp.src('./src/styles/usage/page/*.scss')
         .pipe(sass().on('error',sass.logError))
         .pipe(minifyCSS())
         .pipe(gulp.dest('./prd/styles/'));
 });//css处理
 
 var jsFiles=[
-    './src/scripts/index-app.js',
-    './src/scripts/invite-app.js',
-    './src/scripts/mine-app.js',
-    './src/scripts/task-app.js',
-    './src/scripts/try-app.js'
+    './src/scripts/*.js'
 ];
 gulp.task('packjs',function () {
     gulp.src(jsFiles)
@@ -114,6 +109,7 @@ gulp.task('packjs',function () {
                 ]
             }
         }))
+        .pipe(gulp.dest('./prd/scripts/'));
 });
 
 gulp.task('watch',function () {
