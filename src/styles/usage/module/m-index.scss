@@ -6,6 +6,7 @@
         width: 100%;
     }
     header {
+           position: relative;
         height: 0.44rem;
         ul {
             width: 100%;
@@ -53,24 +54,16 @@
                 }
             }
         }
-    }
-    .boxcontent {
-        position: relative;
-        width: 100%;
-        flex: 1;
-        @include flex-direction(column);
-        overflow-y: scroll;
-        background-color: #eeeeee;
-        .alllist{
+         .alllist{
             position: absolute;
-            top: 0;
+            top: .44rem;
             left: 0;
             width: 84px;
             height: 300px;
             background-color: #f5f5f5;
             z-index: 99;
             display: none;
-            ul{
+            ol{
                 li{
                     text-align: center;
                     opacity: 0.8;
@@ -81,6 +74,15 @@
                 }
             }
         }
+    }
+    .boxcontent {
+     
+        width: 100%;
+        flex: 1;
+        @include flex-direction(column);
+        overflow-y: scroll;
+        background-color: #eeeeee;
+       
         .box2 {
             background-color: #eeeeee;
             .swiper-container img {

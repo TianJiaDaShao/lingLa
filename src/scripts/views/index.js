@@ -1,6 +1,6 @@
+
 var str = require('../tpls/index.string');
 var footer = require('../tpls/footer.string');
-
 var common = require('../utils/common.util.js');
 var iscrollUtil = require('../utils/iscroll.util.js');
 
@@ -54,4 +54,4 @@ $("#qiandao2").on('tap',function(){
 $(".sublist").on('tap',function(){
 	$(".alllist").css({"display":"none"});
 })
-}
+};

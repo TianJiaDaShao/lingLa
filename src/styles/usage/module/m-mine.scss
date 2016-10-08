@@ -1,4 +1,4 @@
-body{@include flexbox();@include flex-direction(column);background: #f5f5f5;}
+body{@include flexbox();@include flex-direction(column);background: #f5f5f5;@extend %footer;}
 header{height: 20vh;background: #333;line-height: 20vh;font-size:4vh;@include flexbox();color:#fff;}
 header div{margin: 0 5vw;width: 20vw;height: 20vw;border-radius: 20vw;background: #fff;margin-top: 5vh;text-align: center;line-height: 20vw}
 .login{height: 20vh;background: #fff;display: flex;flex-direction: column;border-top:1px solid #c7c7cc;border-bottom:1px solid #c7c7cc;}
@@ -22,3 +22,6 @@ p span e {color:#c7c7cc;font-family: "新宋体";float: right;margin-right: 2vh;
 header .iconfont{
   color:#999999;
 }
+
+
+

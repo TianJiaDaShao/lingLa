@@ -142,6 +142,7 @@
         }
       }
     }
+
     .ceng{
       height: 69vw;
       @include flexbox();
@@ -203,6 +204,6 @@
       }
     }
   }
-
+  @extend %footer;
 
 }

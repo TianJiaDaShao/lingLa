@@ -1,0 +1,224 @@
+.container {
+  height: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  > * {
+    width: 100%;
+  }
+  header {
+    height: 53px;
+    ul {
+      width: 100%;
+      height: 100%;
+      @include flexbox();
+      background-color: $baseColor;
+      font-size: 22px;
+      li {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        height: 100%;
+        a{
+          text-decoration: none;
+          color:#fff;
+          opacity: .6;
+          font-size:40px;
+          font-weight: normal;
+        }
+        &:nth-child(2) {
+          @include flex(1);
+          span {
+            width: 70px;
+            height: 35px;
+            font-size: 16px;
+            line-height: 35px;
+            text-align: center;
+            &:first-child {
+              @include border($border-width:1px,$border-color:#ffffff,$border-style:solid,$radius:5px);
+              border-radius: 5px 0 0 5px;
+            }
+            &:last-child {
+              @include border($border-width:1px,$border-color:#ffffff,$border-style:solid,$radius:5px);
+              border-radius: 0 5px 5px 0;
+            }
+            &.active {
+              background-color: #ffffff;
+              color: $baseColor;
+            }
+            &:not(.active) {
+              color: #ffffff;
+            }
+          }
+        }
+        &:not(:nth-child(2)) {
+          width: 64px;
+          color: #fff;
+          span{
+            width:41px;
+            height:23px;
+            font-size: 14px;
+            line-height:23px;
+            text-align: center;
+            @include border($border-width:1px,$border-color:#ffffff,$border-style:solid,$radius:20px);
+          }
+        }
+      }
+    }
+  }
+
+  > section {
+    @include flex(1);
+    overflow: hidden;
+    width: 100%;
+    .swiper-container {
+      height: 100%;
+      section {
+        height: 100%;
+        .head {
+          text-align: center;
+          height: 35px;
+          line-height: 35px;
+        }
+        .head img {
+          width: 16px;
+          display: inline-block;
+          transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+          transition: transform 150ms;
+          -webkit-transition: transform 150ms;
+        }
+        .up {
+          transform: rotate(360deg) !important;
+          -webkit-transform: rotate(360deg) !important;
+        }
+        .foot {
+          text-align: center;
+          height: 35px;
+          line-height: 35px;
+        }
+        .foot img {
+          display: inline-block;
+          width: 16px;
+          /*transform: rotate(0deg);*/
+          /*-webkit-transform: rotate(0deg);*/
+          transition: transform 150ms;
+          -webkit-transition: transform 150ms;
+        }
+        .down {
+          transform: rotate(180deg) !important;
+          -webkit-transform: rotate(180deg) !important;
+        }
+        ul {
+          @include flexbox();
+          flex-wrap: wrap;
+          align-content: flex-start;
+          width: 100%;
+          li {
+            width: 100%;
+            padding: 1px;
+            #spanbox {
+              width: 100%;
+              display: block;
+              #time{
+                background: #fff;
+                font-size:12px;
+                font-weight: normal;
+                height:28px;
+                line-height:28px;
+                padding-left:79%;
+                color:#999;
+                @include border($border-width:0 0 1px 0,$border-color:#d4d4d4,$border-style:solid);
+              }
+              em{
+                display:block;
+                background: #fff;
+                width:100%;
+                i{
+                  width:95%;
+                  display: block;
+                  height:104px;
+                  font-weight: normal;
+                  @include border($border-width:0 0 1px 0,$border-color:#d4d4d4,$border-style:solid);
+                  img{
+                    display: block;
+                    float: left;
+                    margin:12px 12px 0 17px;
+                    width:96px;
+                    height:79px;
+                  }
+                  h2{
+                    float: left;
+                    margin:15px 0 10px;
+                    color:#444;
+                    font-weight: bold;
+                    font-size: 18px;
+                    overflow: hidden;
+                    height:40px;
+                    width:51%;
+                    line-height: 20px;
+                  }
+                  .name{
+                    color:#888;
+                    font-size: 14px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-weight:bold;
+                  }
+                  a{
+                    text-decoration: none;
+                    float:left;
+                    position:absolute;
+                    z-index: 1;
+                    top:45px;
+                    right:-12px;
+                    font-size: 20px;
+                    color:#999;
+                    font-weight: bold;
+                  }
+                }
+              }
+              b {
+                background: #fff;
+                display: block;
+                height:28px;
+                font-weight: normal;
+                padding: 0 17px;
+                #toTask{
+                  float: left;
+                  color:#666;
+                  font-size:12px;
+                  line-height:28px;
+                }
+                #rest{
+                  float: left;
+                  color:#666;
+                  font-size:12px;
+                  line-height:28px;
+                  padding-left:5px;
+                }
+                .iconfont{
+                  float: right;
+                  margin-right:2%;
+                  margin-top:-1px;
+                  width:18px;
+                  height:30px;
+                  font-size:18px;
+                  color:$baseColor;
+                  line-height:28px;
+                }
+                #relay{
+                  float:right;
+                  color:#666;
+                  font-size:12px;
+                  line-height:28px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @extend %footer;
+}

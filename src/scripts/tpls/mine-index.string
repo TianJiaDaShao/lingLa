@@ -1,3 +1,4 @@
+<div class="container">
 <header>
     <div><i class="iconfont">&#xe605;</i></div>
     未登录
@@ -7,3 +8,4 @@
     <p><i class="iconfont">&#xe604;</i><span>QQ账号安全登录<e>&gt</e></span></p>
 </div>
 <div class="register"><p><i class="iconfont">&#xe605;</i><span>快速注册<e>&gt</e></span></p></div>
+</div>

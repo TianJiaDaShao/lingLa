@@ -1,0 +1,33 @@
+<div class="container">
+    <header>
+        <ul>
+            <li>
+                <span>规则</span>
+            </li>
+            <li>
+                <span class="active">转发任务</span>
+                <span>有奖邀请</span>
+            </li>
+            <li><a class="iconfont" href="javascript:location=location">&#xe604;</a></li>
+        </ul>
+    </header>
+    <section>
+      <div class="swiper-container" id="index-swiper">
+        <section id="index-scroll">
+          <script id="list" type="text/html">
+          <ul>
+            {{each data as value i}}
+            <li>
+              <span id="spanbox">
+                <h3 id="time">{{value.time}}</h3>
+                <em><i><img src={{value.img}} alt=""><h2 id="title">{{value.title}}</h2><span class="name">{{value.name}}</span><a class="iconfont" href="javascript:;">&#xe632;</a></i></em>
+                <b><span id="toTask">{{value.toTask}}</span><span id="rest">{{value.rest}}</span><span id="relay">{{value.relay}}</span><i class="iconfont">{{value.circle}}</i></b>
+              </span>
+            </li>
+            {{/each}}
+          </ul>
+          </script>
+        </section>
+      </div>
+    </section>
+</div>

@@ -45,12 +45,12 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(12);
+	module.exports = __webpack_require__(20);
 
 
 /***/ },
 
-/***/ 12:
+/***/ 20:
 /***/ function(module, exports) {
 
 	/*** IMPORTS FROM imports-loader ***/

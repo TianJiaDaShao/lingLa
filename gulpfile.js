@@ -27,33 +27,33 @@ gulp.task('webserver',function () {
             middleware:function (req, res, next) {
                 var urlObj=url.parse(req.url,true);
                 switch (urlObj.pathname){
-                    case '/api/FenLei.php':
-                        res.setHeader('Content-Type','application/json');
-                        fs.readFile('./mock/FenLei.json',function (err, data) {
-                            res.end(data);
-                        });
-                        return;
-                    case '/api/commodity.php':
-                        res.setHeader('Content-Type','application/json');
-                        fs.readFile('./mock/commodity.json',function (err, data) {
-                            res.end(data);
-                        });
-                        return;
-                    case '/api/User.php':
-                        res.setHeader('Content-Type','application/json');
-                        fs.readFile('./mock/User.json',function (err, data) {
-                            res.end(data);
-                        });
-                        return;
-                    case '/api/renWu.php':
-                        res.setHeader('Content-Type','application/json');
-                        fs.readFile('./mock/renWu.json',function (err, data) {
-                            res.end(data);
-                        });
-                        return;
                     case '/api/shouye.php':
                         res.setHeader('Content-Type', 'application/json');
                         fs.readFile('./mock/shouye.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/applicant.php':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/applicant.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/task.php':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/task.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/taskRefresh.php':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/task-refresh.json', function (err, data) {
+                            res.end(data);
+                        });
+                        return;
+                    case '/api/taskMore.php':
+                        res.setHeader('Content-Type', 'application/json');
+                        fs.readFile('./mock/task-more.json', function (err, data) {
                             res.end(data);
                         });
                         return;
@@ -64,15 +64,7 @@ gulp.task('webserver',function () {
 });//启动webserver
 
 gulp.task('copy',function () {
-    gulp.src('./index.html')
-        .pipe(gulp.dest('./prd'));
-    gulp.src('./invite.html')
-        .pipe(gulp.dest('./prd'));
-    gulp.src('./mine.html')
-        .pipe(gulp.dest('./prd'));
-    gulp.src('./task.html')
-        .pipe(gulp.dest('./prd'));
-    gulp.src('./try.html')
+    gulp.src('./*.html')
         .pipe(gulp.dest('./prd'));
     gulp.src('./images/**/*')
         .pipe(gulp.dest('./prd/images/'));

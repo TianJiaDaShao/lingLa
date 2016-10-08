@@ -10,10 +10,8 @@
 			</li>
 			<li id="qiandao2" class="iconfont">&#xe62b;<b>签到</b></li>
 		</ul>
-	</header>
-	<div class="boxcontent">
 		<div class="alllist">
-			<ul>
+			<ol>
 				<li class="sublist">服装鞋包</li>
 				<li class="sublist">手机数码</li>
 				<li class="sublist">家用电器</li>
@@ -24,8 +22,10 @@
 				<li class="sublist">美食特产</li>
 				<li class="sublist">运动户外</li>
 				<li class="sublist">文化娱乐</li>
-			</ul>
+			</ol>
 		</div>
+	</header>
+	<div class="boxcontent">
 		<div class="box2">
 			<div class="swiper-container">
 				<div class="swiper-wrapper">

@@ -1,4 +1,4 @@
-/*module.exports = function (options) {
+module.exports = function (options) {
   var defaultOpions = {
     id: '#index-scroll'
   };
@@ -49,4 +49,3 @@
       opt.moreAjax();
     }
   });}
-*/
